@@ -1,0 +1,22 @@
+{
+  "name": "readme_generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sevalc/ReadMe_generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sevalc/ReadMe_generator/issues"
+  },
+  "homepage": "https://github.com/sevalc/ReadMe_generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.2"
+  }
+}

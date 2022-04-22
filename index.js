@@ -30,8 +30,13 @@ inquirer
     },
     {
       type: 'input',
-      message: 'Contributers',
-      name: 'Contributers',
+      message: 'Links to the project',
+      name: 'Links',
+    },
+    {
+      type: 'input',
+      message: 'Contributing',
+      name: 'Contributing',
     },
     {
       type: 'list',
@@ -39,10 +44,15 @@ inquirer
       name: 'Licence',
       choices: ["MIT", "GNU", "Apache"]
     },
+    {
+      type: 'input',
+      message: 'Please provide gitHUb and email',
+      name: 'Questions',
+    },
   ])
   .then((data) => {
     console.log(data) ;
-    fs.writeFileSync('./README2.md', generateFormatReadme(data))    
+    fs.writeFileSync('./README1.md', generateFormatReadme(data))    
 });
 
 function generateFormatReadme(data) {
@@ -56,19 +66,28 @@ ${data.UserStory}
 ## Acceptance Criteria:
 ${data.AcceptanceCri}
 ## Table of Contents:
-- [Description](#Description)
-- [User Story](#UserStory)
-- [Acceptance Criteria](#AcceptanceCri)
-- [Table of Contents]()
-- [Installation](#Installation)
-- [Contributers](#Contributers)
-- [Licence](#Licence)
+- [Title:](#title)
+- [Description:](#description)
+- [User Story:](#user-story)
+- [Acceptance Criteria:](#acceptance-criteria)
+- [Table of Contents:](#table-of-contents)
+- [Installation:](#installation)
+- [Links to the project:](#links-to-the-project)
+- [Contributing:](#contributing)
+- [Licence:](#licence)
+- [Questions:](#questions)
 
 ## Installation:
 ${data.Installation}
-## Contributers:
-${data.Contributers}
+## Links to the project:
+${data.Links}
+## Contributing:
+${data.Contributing}
 ## Licence:
+This project is licenced under:
 [![License: ${data.Licence}](https://img.shields.io/badge/License-${data.Licence}-yellow.svg)](https://opensource.org/licenses/${data.Licence})
+## Questions:
+Please contact me for additional questions. 
+${data.Questions}
 `
 }
